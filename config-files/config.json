@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Example API title",
+        "slug": "example-slug-for-ref",
+        "yamlSource": "./yaml/example-yaml-source-file.yaml",
+        "description": "This page contains ...",
+        "hide": "false",
+        "additionalField": "Add additional fields for each page as you see fit. Use this config file to define variables used in api-ref.handlebars."
+    }
+]

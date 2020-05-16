@@ -1,0 +1,13 @@
+/* Define your own styles here */
+
+header {
+    background-color: skyblue;
+    color: white;
+    height: 30px;
+}
+
+footer {
+    background-color: skyblue;
+    color: white;
+    height: 30px;
+}

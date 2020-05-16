@@ -1,0 +1,31 @@
+{
+  "name": "gulp-static-site-sample",
+  "version": "1.0.0",
+  "description": "Proof of concept for quickly generating multiple static Swagger/OpenAPI-based REST API references.",
+  "main": "build/web-services/knox-deployment-program-api-reference-(v2.0).html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ellisken/gulp-static-site-sample"
+  },
+  "author": "Kendra Ellis",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^5.1.0",
+    "es6-promise": "^4.2.8",
+    "handlebars": "^4.5.3",
+    "isomorphic-fetch": "^2.2.1",
+    "kind-of": "^6.0.3",
+    "minimist": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "serve": "^11.3.0"
+  }
+}

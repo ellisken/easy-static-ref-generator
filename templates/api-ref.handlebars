@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Optional to hide the page from search engines. Only appears if config.json object has "hide" property -->
+    {{#if hide }}
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    {{/if}}
+    <title>{{title}}</title>
+    <link href='../assets/styles/styles.css' rel='stylesheet'>
+</head>
+
+<body>
+<header>
+    Example header
+</header>
+    {{!-- ReDoc scripts --}}
+    <redoc suppress-warnings='true' spec-url='{{yamlSource}}' hide-download-button></redoc>
+    <script src='https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js'> </script>
+<footer>Example footer</footer>
+</html>
