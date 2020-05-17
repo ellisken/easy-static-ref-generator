@@ -14,12 +14,19 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 
 ## Contents
 [Install](#install)
+
 [Dependencies](#dependencies)
+
 [Project Structure](#project-structure)
+
 [Project Components](#project-components)
+
 [Get Started](#get-started)
+
 [Build](#build)
+
 [Serve](#serve)
+
 [Publish](#publish)
 
 ## Install
@@ -85,7 +92,7 @@ handlebars-poc
 |___yaml
 |   |   ...
 |
-|___node_modules
+|___node_modules (not tracked)
 |   |   ...
 |
 |---build (not tracked)
