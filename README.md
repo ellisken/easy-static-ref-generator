@@ -13,25 +13,16 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 **mostly static since ReDoc dynamically translates YAML client-side.*
 
 ## Contents
-[Install](#install)
-
-[Dependencies](#dependencies)
-
-[Project structure](#project-structure)
-
-[Project components](#project-components)
-
-[Get started](#get-started)
-
-[Build](#build)
-
-[Serve](#serve)
-
-[Publish](#publish)
-
-[License](#license)
-
-[Author](#author)
+1. [Install](#install)
+2. [Dependencies](#dependencies)
+3. [Project structure](#project-structure)
+4. [Project components](#project-components)
+5. [Get started](#get-started)
+6. [Build](#build)
+7. [Serve](#serve)
+8. [Publish](#publish)
+9. [License](#license)
+10. [Author](#author)
 
 ## Install
 Before you start, you need [nodejs](https://nodejs.org/en/) version 10 or higher, [npm](https://www.npmjs.com/package/npm), and the [gulp-cli](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility) installed globally.
@@ -224,3 +215,17 @@ To stop serving locally, type `ctrl+c` and then enter `y` to to force-close all 
 
 ## Publish
 Serve all bundled contents of the /build directory.
+
+## License
+MIT
+
+Copyright 2020 Kendra Ellis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Author
+All content produced or written by Kendra Ellis [ellisken](https://github.com/ellisken/)
