@@ -18,7 +18,7 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 4. [Project components](#project-components)
 5. [Get started](#get-started)
 6. [Build](#build)
-7. [Serve](#serve)
+7. [Serve locally](#serve-locally)
 8. [Publish](#publish)
 9. [License](#license)
 10. [Author](#author)
@@ -162,7 +162,7 @@ Remember that **api-ref.handlebars** defines common elements that will be visibl
 ### 4. Build and serve your references locally
 Use the ```makeDocs``` gulp command to build your static API references. See [Build](#build) for more information.
 
-Then, [serve your references locally](#serve).
+Then, [serve your references locally](#serve-locally).
 
 
 ## Build
@@ -193,7 +193,7 @@ build
 |___.html files for each reference defined in config.json
 ```
 
-## Serve
+## Serve locally
 To see the rendered YAML locally, use the [serve](https://github.com/zeit/serve) package to serve the /build directory from your machine. 
 
 After running `gulp makeDocs`, start serving with the following command:
