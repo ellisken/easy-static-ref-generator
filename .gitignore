@@ -40,3 +40,6 @@ build/
 # Optional npm cache directory
 .npm
 
+# Local text file for tracking project tasks
+todo.txt
+

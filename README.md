@@ -27,7 +27,7 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 ## Install
 Before you start, you need [nodejs](https://nodejs.org/en/) version 10 or higher, [npm](https://www.npmjs.com/package/npm), and the [gulp-cli](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility) installed globally.
 
-Then, run the following commands to clone the project and try it out:
+[Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the project to create a copy of the repository under your GitHub account. Then run the following commands to clone the project and try it out:
 
 ```bash
 # Clone the repo
@@ -46,7 +46,7 @@ gulp makeDocs
 npx serve build
 ```
 
-To view the example page, open ```localhost:5000``` in your browser and click on **example-slug-for-ref** to open the example reference.
+To view the example page that uses Swagger's Petstore (1.0.0) example API, open ```localhost:5000``` in your browser and click on **example-slug-for-ref** to open the example reference.
 
 ## Dependencies
 - [handlebars](https://handlebarsjs.com/) - simple templating language used to define a common layout for all generated HTML pages
@@ -217,6 +217,7 @@ To stop serving locally, type `ctrl+c` and then enter `y` to to force-close all 
 Serve all bundled contents of the /build directory.
 
 ## License
+### Easy Static Ref Generator
 MIT
 
 Copyright 2020 Kendra Ellis
@@ -227,5 +228,10 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Author
-All content produced or written by Kendra Ellis [ellisken](https://github.com/ellisken/)
+### Swagger Petstore (1.0.0) example API
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+## Author/Developer
+Kendra Ellis ([ellisken](https://github.com/ellisken/))
+### Credits
+ReDoc and OpenAPI/Swagger for Swagger Petstore (1.0.0).
