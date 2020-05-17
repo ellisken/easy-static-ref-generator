@@ -1,5 +1,5 @@
 # Easy Static Ref Generator
-Easy Static Ref Generator (ESRG) simplifies the process of building static HTML reference pages for REST APIs with a uniform look and feel.
+Easy Static Ref Generator (ESRG) simplifies the process of building (mostly) static* HTML reference pages for REST APIs with a uniform look and feel.
 
 The project's flexible, lightweight model helps you get started without investing hours learning to use a platform like Gatsby. 
 
@@ -10,8 +10,19 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 - A few [gulp.js](https://gulpjs.com/) tasks
 - [ReDoc](https://github.com/Redocly/redoc) to translate and format your YAML definitions
 
+*(mostly) static in that ReDoc dynamically translates the YAML in the browser.
 
-## Installation
+## Contents
+[Install](#install)
+[Dependencies](#dependencies)
+[Project Structure](#project-structure)
+[Project Components](#project-components)
+[Get Started](#get-started)
+[Build](#build)
+[Serve](#serve)
+[Publish](#publish)
+
+## Install
 Before you start, you need [nodejs](https://nodejs.org/en/) version 10 or higher, [npm](https://www.npmjs.com/package/npm), and the [gulp-cli](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility) installed globally.
 
 Then, run the following commands to open the project, install all Node packages, build the example page, and serve it:
@@ -119,7 +130,7 @@ config.json based on the slug for each reference.
 - **moveYaml** - moves all YAML source files to the /build directory for easy bundling.
 - **moveAssets** - minifies JavaScript and CSS files, moves assets to the /build directory, and calls moveYaml.
 
-## Get started
+## Get Started
 This basic tutorial will show you how to:
 - Add and build a new REST API reference.
 - Customize your common reference theme by modifying api-ref.handlebars.
