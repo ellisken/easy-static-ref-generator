@@ -152,16 +152,16 @@ Before you start, make sure you've [installed the project](##install) on your ma
 Write up your REST API reference in YAML according to the [Swagger/OpenAPI](https://swagger.io/resources/open-api/) specification 
 
 ### 2. Define a new API reference object in config.json
-Add a new object to the list in [config.json](###config.json) for the reference you want to create, making sure to include values for the following properties:
-- [title](####Required)
-- [slug](####Required)
-- [yamlSource](####Required)
-- [description](####Required)
+Add a new object to the list in [config.json](#config.json) for the reference you want to create, making sure to include values for the following properties:
+- [title](#required)
+- [slug](#required)
+- [yamlSource](#required)
+- [description](#required)
 
 You can also include more fields for use as variables in the **api-ref.handlebars** template. 
 
 ### 3. Customize api-ref.handlebars
-Open [api-ref.handlebars](###api-ref.handlebars) in your editor. Note that it comes with placeholder header and footer elements, some predefined meta tags, and the required ```<redoc>``` element and script tag.
+Open [api-ref.handlebars](#api-refhandlebars) in your editor. Note that it comes with placeholder header and footer elements, some predefined meta tags, and the required ```<redoc>``` element and script tag.
 
 ![iamge of api-ref.handlebars contents](/assets/images/handlebars-template.PNG)
 
