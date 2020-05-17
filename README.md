@@ -1,5 +1,5 @@
 # Easy Static Ref Generator
-Easy Static Ref Generator (ESRG) simplifies the process of building (mostly)* static HTML reference pages for REST APIs with a uniform look and feel.
+Easy Static Ref Generator (ESRG) simplifies the process of building static HTML reference pages for REST APIs with a uniform look and feel.
 
 The project's flexible, lightweight model helps you get started without investing hours learning to use a platform like Gatsby. 
 
@@ -10,7 +10,6 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 - A few [gulp.js](https://gulpjs.com/) tasks
 - [ReDoc](https://github.com/Redocly/redoc) to translate and format your YAML definitions
 
-**mostly static since ReDoc dynamically translates YAML client-side.*
 
 ## Contents
 1. [Install](#install)
@@ -49,13 +48,13 @@ npx serve build
 To view the example page that uses Swagger's Petstore (1.0.0) example API, open ```localhost:5000``` in your browser and click on **example-slug-for-ref** to open the example reference.
 
 ## Dependencies
-- [handlebars](https://handlebarsjs.com/) - simple templating language used to define a common layout for all generated HTML pages
-- [gulp](https://gulpjs.com/) - taskrunner and build system for front-end web development used to build the static HTML files and create the /build directory
-- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - gulp plugin used to minify css files before moving stylesheets to the /build directory
-- [gulp-compile-handlebars](https://github.com/thegrubbsian/gulp-compile-handlebars) - gulp plugin used to precompile handlebars templates into HTML
-- [gulp-rename](https://www.npmjs.com/package/gulp-rename) - gulp plugin enabling easy file renaming during gulp tasks
-- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - gulp plugin used to minify JavaScript files before moving scripts to the /build directory
-- [serve](https://github.com/zeit/serve) - lets you serve the built pages from your local computer so you can easily view the rendered YAML before publishing 
+- [handlebars](https://handlebarsjs.com/) - simple templating language used to define a common layout for all generated HTML pages.
+- [gulp](https://gulpjs.com/) - taskrunner and build system for front-end web development used to build the static HTML files and create the /build directory.
+- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - gulp plugin used to minify css files before moving stylesheets to the /build directory.
+- [gulp-compile-handlebars](https://github.com/thegrubbsian/gulp-compile-handlebars) - gulp plugin used to precompile handlebars templates into HTML.
+- [gulp-rename](https://www.npmjs.com/package/gulp-rename) - gulp plugin enabling easy file renaming during gulp tasks.
+- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - gulp plugin used to minify JavaScript files before moving scripts to the /build directory.
+- [serve](https://github.com/zeit/serve) - node package for serving static files from your local computer for viewing the rendered YAML before publishing.
 
 ## Project structure
 ```
@@ -102,12 +101,12 @@ The **api-ref.handlebars** template defines all common HTML content. Include ele
 ### config-files/config.json
 Use this config file to define properties for each reference you want to build. 
 
-**config.json** requires the following properties for for each *individual* reference:
+**config.json** defines the following properties for for each *individual* reference:
 #### Required
-- title - browser title for the reference
-- slug - URL [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for the reference
-- yamlSource - associated YAML source file for the reference
-- description - metadata description for the generated page to improve site SEO
+- title - browser title for the reference.
+- slug - URL [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for the reference.
+- yamlSource - associated YAML source file for the reference.
+- description - metadata description for the generated page to improve site SEO.
 #### Optional
 - hide - adds ```<meta name="robots" content="noindex,nofollow,noarchive" />``` to the ```<head>``` of the page in question to hide the reference from search engine crawlers. Set this property when you intend to publish a reference for a limited audience.
 
@@ -140,7 +139,7 @@ This basic tutorial will show you how to:
 Before you start, make sure you've [installed the project](#install) on your machine.
 
 ### 1. Add your Swagger API YAML to the /yaml folder
-Write up your REST API reference in YAML according to the [Swagger/OpenAPI](https://swagger.io/resources/open-api/) specification 
+Write up your REST API reference in YAML according to the [Swagger/OpenAPI](https://swagger.io/resources/open-api/) specification, then add it to the /yaml folder.
 
 ### 2. Define a new API reference object in config.json
 Add a new object to the list in [config.json](#config-filesconfigjson) for the reference you want to create, making sure to include values for the following properties:
@@ -214,7 +213,9 @@ Click on the page you want to view.
 To stop serving locally, type `ctrl+c` and then enter `y` to to force-close all sockets.
 
 ## Publish
-Serve all bundled contents of the /build directory.
+Serve all bundled contents of the /build directory statically.
+
+If you're looking for an easy way to host a static website, consider [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 ## License
 ### Easy Static Ref Generator
