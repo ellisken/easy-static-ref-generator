@@ -59,11 +59,11 @@ To view the example page, open ```localhost:5000``` in your browser and click on
 
 ## Dependencies
 - [handlebars](https://handlebarsjs.com/) - simple templating language used to define a common layout for all generated HTML pages
-- [gulp](https://gulpjs.com/) - taskrunner and build system for front-end web development used to build the static HTML files and create the**/build**directory
-- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - gulp plugin used to minify css files before moving stylesheets to the**/build**directory
+- [gulp](https://gulpjs.com/) - taskrunner and build system for front-end web development used to build the static HTML files and create the /build directory
+- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - gulp plugin used to minify css files before moving stylesheets to the /build directory
 - [gulp-compile-handlebars](https://github.com/thegrubbsian/gulp-compile-handlebars) - gulp plugin used to precompile handlebars templates into HTML
 - [gulp-rename](https://www.npmjs.com/package/gulp-rename) - gulp plugin enabling easy file renaming during gulp tasks
-- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - gulp plugin used to minify JavaScript files before moving scripts to the**/build**directory
+- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - gulp plugin used to minify JavaScript files before moving scripts to the /build directory
 - [serve](https://github.com/zeit/serve) - lets you serve the built pages from your local computer so you can easily view the rendered YAML before publishing 
 
 ## Project structure
@@ -122,7 +122,7 @@ Use this config file to define properties for each reference you want to build.
 
 Optionally include additional properties for each reference for use in **api-ref.handlebars**. For example, to add an outlink to an associated developer guide for each API reference, create a field called "outlink" in **config.json** for each reference, then use its value in **api-ref.handlebars**:
 ```HTML
-    <a href='{{ outlink }}'>Visit the developer guide</a>
+<a href='{{ outlink }}'>Visit the developer guide</a>
 ```
 
 ### gulpfile.js
@@ -134,25 +134,25 @@ gulp < insert task name >
 ```
 
 #### gulp tasks
-- **makeDocs** - calls ```cleanBuild``` to remove the**/build**directory, then calls ```moveAssets``` and ```makeHtml```.
-- **cleanBuild** - removes the**/build**directory and its contents.
+- **makeDocs** - calls ```cleanBuild``` to remove the /build directory, then calls ```moveAssets``` and ```makeHtml```.
+- **cleanBuild** - removes the /build directory and its contents.
 - **makeHtml** - makes HTML documents for each api ref specified in
 config.json based on the slug for each reference.
-- **moveYaml** - moves all YAML source files to the**/build**directory for easy bundling.
-- **moveAssets** - minifies JavaScript and CSS files, moves assets to the**/build**directory, and calls ```moveYaml```.
+- **moveYaml** - moves all YAML source files to the /build directory for easy bundling.
+- **moveAssets** - minifies JavaScript and CSS files, moves assets to the /build directory, and calls ```moveYaml```.
 
 ## Get started
 This basic tutorial will show you how to:
 - Add and build a new REST API reference.
 - Customize your common reference theme by modifying **api-ref.handlebars**.
 
-Before you start, make sure you've [installed the project](##install) on your machine.
+Before you start, make sure you've [installed the project](#install) on your machine.
 
 ### 1. Add your Swagger API YAML to the /yaml folder
 Write up your REST API reference in YAML according to the [Swagger/OpenAPI](https://swagger.io/resources/open-api/) specification 
 
 ### 2. Define a new API reference object in config.json
-Add a new object to the list in [config.json](#config.json) for the reference you want to create, making sure to include values for the following properties:
+Add a new object to the list in [config.json](#config-filesconfigjson) for the reference you want to create, making sure to include values for the following properties:
 - [title](#required)
 - [slug](#required)
 - [yamlSource](#required)
@@ -161,7 +161,7 @@ Add a new object to the list in [config.json](#config.json) for the reference yo
 You can also include more fields for use as variables in the **api-ref.handlebars** template. 
 
 ### 3. Customize api-ref.handlebars
-Open [api-ref.handlebars](#api-refhandlebars) in your editor. Note that it comes with placeholder header and footer elements, some predefined meta tags, and the required ```<redoc>``` element and script tag.
+Open [api-ref.handlebars](#templatesapi-refhandlebars) in your editor. Note that it comes with placeholder header and footer elements, some predefined meta tags, and the required ```<redoc>``` element and script tag.
 
 ![iamge of api-ref.handlebars contents](/assets/images/handlebars-template.PNG)
 
@@ -170,21 +170,21 @@ Modify the template as you see fit. Consider changing the header or footer, addi
 Remember that **api-ref.handlebars** defines common elements that will be visible on each of your generated API reference pages.
 
 ### 4. Build and serve your references locally
-Use the ```makeDocs``` gulp command to build your static API references. See [Building](#build) for more information.
+Use the ```makeDocs``` gulp command to build your static API references. See [Build](#build) for more information.
 
 Then, [serve your references locally](#serve).
 
 
 ## Build
-Once you've set up **config.jso**n and customized **api-ref.handlebars**, you can build all HTML files using the following command:
+Once you've set up **config.json** and customized **api-ref.handlebars**, you can build all HTML files using the following command:
 ```bash
 gulp makeDocs
 ```
-You will see a series of messages like the following, indicating that any existing build artifacts have been removed, all assets have been moved (and scripts/css minified), and all HTML pages have been generated and placed in the**/build**directory.
+You will see a series of messages like the following, indicating that any existing build artifacts have been removed, all assets have been moved (and scripts/css minified), and all HTML pages have been generated and placed in the /build directory.
 
 ![successful build messages](/assets/images/build-messages.PNG)
 
-The**/build**directory should now contain the following files:
+The /build directory should now contain the following files:
 ```
 build
 |___assets
@@ -204,7 +204,7 @@ build
 ```
 
 ## Serve
-To see the rendered YAML locally, use the [serve](https://github.com/zeit/serve) package to serve the**/build**directory from your machine. 
+To see the rendered YAML locally, use the [serve](https://github.com/zeit/serve) package to serve the /build directory from your machine. 
 
 After running `gulp makeDocs`, start serving with the following command:
 ```bash
@@ -215,7 +215,7 @@ You should see this message:
 
 ![successful serve message](/assets/images/build-serving.PNG)
 
-Open localhost:5000 in your browser to see the**/build**directory's contents:
+Open localhost:5000 in your browser to see the /build directory's contents:
 ![view page locally](/assets/images/build-open-page.PNG)
 
 Click on the page you want to view.
@@ -223,4 +223,4 @@ Click on the page you want to view.
 To stop serving locally, type `ctrl+c` and then enter `y` to to force-close all sockets.
 
 ## Publish
-Serve all bundled contents of the**/build**directory.
+Serve all bundled contents of the /build directory.
