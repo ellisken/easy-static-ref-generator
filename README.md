@@ -10,7 +10,7 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 - A few [gulp.js](https://gulpjs.com/) tasks
 - [ReDoc](https://github.com/Redocly/redoc) to translate and format your YAML definitions
 
-*mostly static since ReDoc dynamically translates the YAML client-side.
+**mostly static since ReDoc dynamically translates YAML client-side.*
 
 ## Contents
 [Install](#install)
@@ -29,10 +29,14 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 
 [Publish](#publish)
 
+[License](#license)
+
+[Author](#author)
+
 ## Install
 Before you start, you need [nodejs](https://nodejs.org/en/) version 10 or higher, [npm](https://www.npmjs.com/package/npm), and the [gulp-cli](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility) installed globally.
 
-Then, run the following commands to open the project, install all Node packages, build the example page, and serve it:
+Then, run the following commands to clone the project and try it out:
 
 ```bash
 # Clone the repo
@@ -51,7 +55,7 @@ gulp makeDocs
 npx serve build
 ```
 
-To view the example page, open localhost:5000 in your browser and click on **example-slug-for-ref** to open the reference.
+To view the example page, open ```localhost:5000``` in your browser and click on **example-slug-for-ref** to open the example reference.
 
 ## Dependencies
 - [handlebars](https://handlebarsjs.com/) - simple templating language used to define a common layout for all generated HTML pages
@@ -102,12 +106,12 @@ handlebars-poc
 
 ## Project components
 ### templates/api-ref.handlebars
-The api-ref.handlebars template defines all common HTML content. Include elements like a header and footer with handlebars notation in this file. Note that the provided redoc-standalone.js ```<script>``` tag and ```<redoc>``` element must remain in this template for proper rendering.
+The **api-ref.handlebars** template defines all common HTML content. Include elements like a header and footer with Handlebars notation in this file. Note that the provided **redoc-standalone.js** ```<script>``` tag and ```<redoc>``` element must remain in this template for proper rendering.
 
 ### config-files/config.json
 Use this config file to define properties for each reference you want to build. 
 
-config.json requires the following properties for for each *individual* reference:
+**config.json** requires the following properties for for each *individual* reference:
 #### Required
 - title - browser title for the reference
 - slug - URL [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for the reference
@@ -116,9 +120,9 @@ config.json requires the following properties for for each *individual* referenc
 #### Optional
 - hide - adds ```<meta name="robots" content="noindex,nofollow,noarchive" />``` to the ```<head>``` of the page in question to hide the reference from search engine crawlers. Set this property when you intend to publish a reference for a limited audience.
 
-Optionally include additional properties for each reference for use in **api-ref.handlebars**. For example, to add an outlink to an associated developer guide for each API reference, create a field called "outlink" in config.json for each reference, then use its value in api-ref.handlebars:
+Optionally include additional properties for each reference for use in **api-ref.handlebars**. For example, to add an outlink to an associated developer guide for each API reference, create a field called "outlink" in **config.json** for each reference, then use its value in **api-ref.handlebars**:
 ```HTML
-    <a src='{{ outlink }}'>Visit the developer guide</a>
+    <a href='{{ outlink }}'>Visit the developer guide</a>
 ```
 
 ### gulpfile.js
