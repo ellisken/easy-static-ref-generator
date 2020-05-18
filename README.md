@@ -21,7 +21,7 @@ Quickly define and build one or more static HTML pages for [Swagger/OpenAPI](htt
 7. [Serve locally](#serve-locally)
 8. [Publish](#publish)
 9. [License](#license)
-10. [Author](#author)
+10. [Author](#authordeveloper)
 
 ## Install
 Before you start, you need [nodejs](https://nodejs.org/en/) version 10 or higher, [npm](https://www.npmjs.com/package/npm), and the [gulp-cli](https://gulpjs.com/docs/en/getting-started/quick-start#install-the-gulp-command-line-utility) installed globally.
