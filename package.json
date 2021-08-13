@@ -15,8 +15,8 @@
   "dependencies": {
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
-    "handlebars": "^4.7.6",
-    "isomorphic-fetch": "^2.2.1",
+    "handlebars": "^4.7.7",
+    "isomorphic-fetch": "^3.0.0",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5"
   },
@@ -26,6 +26,6 @@
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "serve": "^11.3.0"
+    "serve": "^11.3.2"
   }
 }
