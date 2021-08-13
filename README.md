@@ -48,10 +48,10 @@ he example page uses Swagger's Petstore (1.0.0) example API. To view the example
 ## Dependencies
 - [handlebars](https://handlebarsjs.com/) - a simple templating language used to define a common layout for all generated HTML pages.
 - [gulp](https://gulpjs.com/) - a taskrunner and build system for front-end web development used to build your static HTML files in a directory called /build.
-- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - a gulp plugin that minifies CSS files before moving stylesheets to the /build directory.
+- [gulp-clean-css](https://github.com/scniro/gulp-clean-css) - a gulp plugin that minifies CSS files before moving stylesheets to the ```/build``` directory.
 - [gulp-compile-handlebars](https://github.com/thegrubbsian/gulp-compile-handlebars) - a gulp plugin that precompiles handlebars templates into HTML.
 - [gulp-rename](https://www.npmjs.com/package/gulp-rename) - a gulp plugin enabling easy file renaming during gulp tasks.
-- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - a gulp plugin that minifies JavaScript files before moving scripts to the /build directory.
+- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) - a gulp plugin that minifies JavaScript files before moving scripts to the ```/build``` directory.
 - [serve](https://github.com/zeit/serve) - a node package for serving static files from your local computer.
 
 ## Project structure
@@ -122,12 +122,12 @@ gulp < insert task name >
 ```
 
 #### gulp tasks
-- **makeDocs** - calls ```cleanBuild``` to remove the /build directory, then calls ```moveAssets``` and ```makeHtml```.
-- **cleanBuild** - removes the /build directory and its contents.
+- **makeDocs** - calls ```cleanBuild``` to remove the ```/build``` directory, then calls ```moveAssets``` and ```makeHtml```.
+- **cleanBuild** - removes the ```/build``` directory and its contents.
 - **makeHtml** - makes HTML documents for each api ref specified in
 config.json based on the slug for each reference.
-- **moveYaml** - moves all YAML source files to the /build directory for easy bundling.
-- **moveAssets** - minifies JavaScript and CSS files, moves assets to the /build directory, and calls ```moveYaml```.
+- **moveYaml** - moves all YAML source files to the ```/build``` directory for easy bundling.
+- **moveAssets** - minifies JavaScript and CSS files, moves assets to the ```/build``` directory, and calls ```moveYaml```.
 
 ## Get started
 This basic tutorial will show you how to:
@@ -168,11 +168,11 @@ Once you've set up **config.json** and customized **api-ref.handlebars**, you ca
 ```bash
 gulp makeDocs
 ```
-You will see a series of messages like the following, indicating that any existing build artifacts have been removed, all assets have been moved (and scripts/css minified), and all HTML pages have been generated and placed in the /build directory.
+You will see a series of messages like the following, indicating that any existing build artifacts have been removed, all assets have been moved (and scripts/css minified), and all HTML pages have been generated and placed in the ```/build``` directory.
 
 ![successful build messages](/assets/images/build-messages.PNG)
 
-The /build directory should now contain the following files:
+The ```/build``` directory should now contain the following files:
 ```
 build
 |___assets
@@ -192,7 +192,7 @@ build
 ```
 
 ## Serve locally
-To see the rendered YAML locally, use the [serve](https://github.com/zeit/serve) package to serve the /build directory from your machine. 
+To see the rendered YAML locally, use the [serve](https://github.com/zeit/serve) package to serve the ```/build``` directory from your machine. 
 
 After running `gulp makeDocs`, start serving with the following command:
 ```bash
@@ -203,15 +203,15 @@ You should see this message:
 
 ![successful serve message](/assets/images/build-serving.PNG)
 
-Open localhost:5000 in your browser to see the /build directory's contents:
+Open localhost:5000 in your browser to see the ```/build``` directory's contents:
 ![view page locally](/assets/images/build-open-page.PNG)
 
-Click on the page you want to view.
+Select the page you want to view. For example, ```example-slug-for-ref``` in the image above.
 
 To stop serving locally, type `ctrl+c` to stop the process.
 
 ## Publish
-Serve all bundled contents of the /build directory statically.
+Serve all bundled contents of the ```/build``` directory statically.
 
 If you're looking for an easy way to host a static website, consider using [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
