@@ -1,12 +1,12 @@
 # Easy Static Ref Generator
-Easy Static Ref Generator (ESRG) simplifies the process of building static HTML reference pages for REST APIs with a uniform look and feel.
+Easy Static Ref Generator (ESRG) lets you generate static API reference pages with a uniform look and feel. With ESRG, you can modify Redoc-rendered API pages with custom page elements. For example, you can add a custom page header so that your API reference has the same header as your user guide. 
 
-With ESRG, you can define and build one or more static HTML pages for [Swagger/OpenAPI](https://swagger.io/) REST API documentation with:
+With ESRG, you define and build API reference pages using the following components:
 - A single config.json file
-- A YAML API definition for each reference
+- An OpenAPI YAML API definition for each reference
 - A single [Handlebars](https://handlebarsjs.com/) template
 - A few [gulp.js](https://gulpjs.com/) tasks
-- [ReDoc](https://github.com/Redocly/redoc) to translate and format your YAML definitions
+- [Redoc](https://github.com/Redocly/redoc) to render your YAML definitions
 
 
 ## Contents
