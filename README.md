@@ -208,6 +208,9 @@ Open localhost:5000 in your browser to see the ```/build``` directory's contents
 
 Select the page you want to view. For example, ```example-slug-for-ref``` in the image above.
 
+You should see a page like the following:
+![example-slug-for-ref page in the browser](/assets/images/build-example-page.png)
+
 To stop serving locally, type `ctrl+c` to stop the process.
 
 ## Publish
